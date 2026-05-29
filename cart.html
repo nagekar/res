@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart</title>
+</head>
+
+<body>
+
+<h2>Your Cart</h2>
+
+<p id="cartItem"></p>
+
+<script>
+    const item = localStorage.getItem("selectedItem");
+
+    if (item) {
+        document.getElementById("cartItem").textContent =
+            "You added: " + item;
+    } else {
+        document.getElementById("cartItem").textContent =
+            "No items in cart";
+    }
+</script>
+
+</body>
+</html>
